@@ -1,3 +1,10 @@
+"""
+Date: 14-06-2021
+Author: Piyush Gairola
+Problem: 110. Balanced Binary Tree [https://leetcode.com/problems/balanced-binary-tree/]
+"""
+
+
 def isBalanced(root):
     def getHeight(node):
         if root is None:
