@@ -14,3 +14,21 @@ def productExceptSelf(nums):
         ans = max(ans, max_prod)
 
     return ans
+
+
+
+def productExceptSelf(nums):
+    ans = []
+    p = 1
+    n = len(nums)
+
+    for i in nums:          ## left elem products
+        ans.append(p)
+        p = p*i
+
+    p = 1
+    for i in range(n-1,-1,-1):  ## right elem products
+        ans[i] *= p
+        p *= nums[i]
+
+    return ans
